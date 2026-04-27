@@ -86,19 +86,19 @@ export function About() {
               {
                 name: "Aryna Mykolaievska",
                 role: "Co-Founder & CEO",
-                image: "/aryna.jpg",
+                image: `${import.meta.env.BASE_URL}aryna.jpg`,
                 description: "Visionary strategist focused on brand evolution and technical innovation in activewear."
               },
               {
                 name: "Oleksandr Khoruzhenko",
                 role: "Co-Founder & CEO",
-                image: "/oleksandr.jpg",
+                image: `${import.meta.env.BASE_URL}oleksandr.jpg`,
                 description: "Operations lead focused on strategy, performance, and building a premium sportswear brand for active lifestyles."
               },
               {
                 name: "Abrar Aiash",
                 role: "Co-Founder & CEO",
-                image: "/abrar.jpg",
+                image: `${import.meta.env.BASE_URL}abrar.jpg`,
                 description: "Creative architectural lead defining the minimalist aesthetic and user experience of NEXASport."
               }
             ].map((founder, i) => (
@@ -112,20 +112,11 @@ export function About() {
               >
                 <div className="w-[190px] h-[190px] mx-auto mb-10 relative flex items-center justify-center">
                   <div className="absolute inset-0 border border-brand-accent transform rotate-45 scale-110 opacity-20 group-hover:rotate-90 transition-transform duration-700"></div>
-                  {founder.name === "Oleksandr Khoruzhenko" ? (
-                    <img 
-                      src="/oleksandr.jpg" 
-                      alt="Oleksandr Khoruzhenko"
-                      className="w-[190px] h-[190px] object-cover object-center rounded-full grayscale group-hover:grayscale-0 transition-all border-2 border-brand-border relative z-20 block"
-                    />
-                  ) : (
                     <img 
                       src={founder.image} 
                       alt={founder.name} 
                       className="w-[190px] h-[190px] object-cover object-center rounded-full grayscale group-hover:grayscale-0 transition-all border-2 border-brand-border relative z-20 block"
-                      referrerPolicy="no-referrer"
                     />
-                  )}
                 </div>
                 <h3 className="font-display font-black uppercase italic tracking-tighter text-xl mb-2">{founder.name}</h3>
                 <p className="mono-detail text-brand-accent font-bold mb-6">{founder.role}</p>
